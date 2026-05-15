@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Request Submitted</h2>
+
+<p>
+    Thank you for contacting BEST Tech Fix. Your service request has been received.
+</p>
+
+<p>
+    I will review your issue and contact you with the next available appointment.
+</p>
+
+<a class="page-link" href="{% url 'home' %}">Return to Help Desk</a>
+{% endblock %}

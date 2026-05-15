@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Book Service</h2>
+
+<p>
+    To request help, fill out the form below. BEST Tech Fix will review your issue
+    and reply with the next available appointment.
+</p>
+
+<form method="POST" class="request-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        {{ form.name.label_tag }}
+        {{ form.name }}
+    </div>
+
+    <div class="form-group">
+        {{ form.phone.label_tag }}
+        {{ form.phone }}
+    </div>
+
+    <div class="form-group">
+        {{ form.email.label_tag }}
+        {{ form.email }}
+    </div>
+
+    <div class="form-group">
+        {{ form.location.label_tag }}
+        {{ form.location }}
+    </div>
+
+    <div class="form-group">
+        {{ form.device_type.label_tag }}
+        {{ form.device_type }}
+    </div>
+
+    <div class="form-group">
+        {{ form.issue_description.label_tag }}
+        {{ form.issue_description }}
+    </div>
+
+    <div class="form-group">
+        {{ form.best_time_to_contact.label_tag }}
+        {{ form.best_time_to_contact }}
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Service Request</button>
+</form>
+{% endblock %}

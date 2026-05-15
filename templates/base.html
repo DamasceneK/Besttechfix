@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BEST Tech Fix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="top-strip">
+        <div class="top-strip-inner">
+            <a href="{% url 'book_service' %}">Book Service</a>
+            <a href="{% url 'pricing' %}">Pricing</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="main-header-inner">
+            <div class="site-logo">
+                <a href="{% url 'home' %}">
+                    <span class="best">BEST</span><span class="tech">TECH FIX</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <a href="{% url 'services' %}">Computer Help</a>
+                <a href="{% url 'services' %}">Phone Help</a>
+                <a href="{% url 'services' %}">Wi-Fi</a>
+                <a href="{% url 'services' %}">Printers</a>
+                <a href="{% url 'pricing' %}">Pricing</a>
+                <a href="{% url 'contact' %}">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+
+      <div class="section-banner image-banner">
+    <div>
+        <h1>IT Services</h1>
+        <p>Computer • Phone • Wi-Fi • Printer • Website Help</p>
+    </div>
+</div>
+
+        <div class="content-layout">
+
+            <aside class="sidebar">
+                <h3>Help Desk</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Help Desk</a></li>
+                    <li><a href="{% url 'self_help' %}">Self-Help</a></li>
+                    <li><a href="{% url 'services' %}">Supported Services</a></li>
+                    <li><a href="{% url 'pricing' %}">Service Pricing</a></li>
+                    <li><a href="{% url 'hours' %}">Hours of Operation</a></li>
+                    <li><a href="{% url 'book_service' %}">Book Service</a></li>
+                    <li><a href="{% url 'contact' %}">Contact BEST Tech Fix</a></li>
+                    <li><a href="{% url 'faq' %}">Tech FAQ</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                {% block content %}
+                {% endblock %}
+            </main>
+
+        </div>
+    </div>
+
+</body>
+</html>
