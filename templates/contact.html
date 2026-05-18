@@ -1,22 +1,46 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h2>Contact BEST Tech Fix</h2>
+<h2>Contact BEST-FIX</h2>
 
 <p>
-    For questions, service updates, or general information, contact BEST Tech Fix.
+    For questions, service updates, or general information, contact BEST-FIX.
 </p>
 
-<p><strong>Phone/Text:</strong> Add your phone number here</p>
-<p><strong>Email:</strong> Add your email here</p>
+<div style="display: grid; grid-template-columns: 1fr 420px; gap: 30px; align-items: start; margin-top: 25px;">
 
-<h3>Need service?</h3>
-<p>
-    If you need help with a computer, phone, Wi-Fi, printer, website, or small business IT issue,
-    please use the Book Service page.
-</p>
+    <div style="background: #f8f8f8; border-left: 4px solid #17384d; padding: 22px;">
+        <p><strong>Phone/Text:</strong> +1 (463) 203-2330</p>
 
-<p>
-    <a class="page-link" href="{% url 'book_service' %}">Book a Service Request</a>
-</p>
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:support@getbestfix.com">support@getbestfix.com</a>
+        </p>
+
+        <p>
+            <strong>Website:</strong>
+            <a href="https://www.getbestfix.com/" target="_blank">www.getbestfix.com</a>
+        </p>
+
+        <h3>Need service?</h3>
+        <p>
+            If you need help with computer repair, phone help, Wi-Fi, printers,
+            website services, or small business IT support, please use the Book Service page.
+        </p>
+
+        <p>
+            <a class="page-link" href="{% url 'book_service' %}">Book a Service Request</a>
+        </p>
+    </div>
+
+    <div>
+        <img 
+            src="{% static 'images/bestfix.png' %}" 
+            alt="BEST-FIX tech support"
+            style="width: 420px; max-width: 420px; height: auto; display: block; border: 1px solid #ddd;"
+        >
+    </div>
+
+</div>
 {% endblock %}

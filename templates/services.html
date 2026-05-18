@@ -1,27 +1,45 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
 <h2>Supported Services</h2>
 
-<p>BEST Tech Fix provides simple tech help for homes and small businesses.</p>
+<p>BEST-FIX provides simple tech help for homes and small businesses.</p>
 
-<h3>Computer Help</h3>
-<ul class="bullet-list">
+<div class="service-image-grid">
+    <div class="service-image-card">
+        <img src="{% static 'images/computer-repair.jpg' %}" alt="Computer repair">
+       <ul class="bullet-list">
     <li>Slow computer cleanup</li>
     <li>Windows updates</li>
     <li>Software installation</li>
     <li>Virus and malware checks</li>
     <li>New laptop setup</li>
 </ul>
+    </div>
 
-<h3>Phone Help</h3>
-<ul class="bullet-list">
+    <div class="service-image-card">
+        <img src="{% static 'images/phone-help.jpg' %}" alt="Phone help">
+        <h3>Phone Help</h3>
+        <ul class="bullet-list">
     <li>Phone setup</li>
     <li>Photo backup</li>
     <li>Storage cleanup</li>
     <li>Contacts transfer</li>
     <li>Email setup</li>
 </ul>
+
+    </div>
+
+   
+
+  
+</div>
+
+ <div class="service-image-card">
+        <img src="{% static 'images/wifi-printer.jpg' %}" alt="Wi-Fi setup">
+     
+    </div>
 
 <h3>Wi-Fi & Printer Setup</h3>
 <ul class="bullet-list">
@@ -31,15 +49,11 @@
     <li>Router setup</li>
     <li>Smart device connection</li>
 </ul>
+ <div class="service-image-card">
+        <img src="{% static 'images/website-service.jpg' %}" alt="Website services">
+       
+    </div>
 
-<h3>Small Business IT Help</h3>
-<ul class="bullet-list">
-    <li>Workstation setup</li>
-    <li>Printer support</li>
-    <li>Email setup</li>
-    <li>Basic device troubleshooting</li>
-    <li>Backup guidance</li>
-</ul>
 <h3>Website Services</h3>
 <ul class="bullet-list">
     <li>Simple business websites</li>
@@ -49,5 +63,14 @@
     <li>Domain and hosting setup</li>
     <li>Website updates and maintenance</li>
     <li>Google Business Profile setup</li>
+</ul>
+
+<h3>Small Business IT Help</h3>
+<ul class="bullet-list">
+    <li>Workstation setup</li>
+    <li>Printer support</li>
+    <li>Email setup</li>
+    <li>Basic device troubleshooting</li>
+    <li>Backup guidance</li>
 </ul>
 {% endblock %}

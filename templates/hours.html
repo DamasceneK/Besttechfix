@@ -3,7 +3,7 @@
 {% block content %}
 <h2>Hours of Operation</h2>
 
-<p><strong>Monday – Friday:</strong> After-work appointments available</p>
+<p><strong>Monday – Friday:</strong> appointments available</p>
 <p><strong>Saturday – Sunday:</strong> Weekend appointments available</p>
 <p><strong>Service Area:</strong> Indianapolis, Plainfield, Camby, and nearby areas</p>
 
@@ -11,4 +11,7 @@
     Appointments are scheduled based on availability. For fastest support,
     send your name, location, device type, and a short description of the issue.
 </p>
+ <p>
+            <a class="page-link" href="{% url 'book_service' %}">Book a Service Request</a>
+        </p>
 {% endblock %}

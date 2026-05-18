@@ -1,302 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+{% extends 'base.html' %}
+{% load static %}
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #efeded;
-    color: #333;
-    line-height: 1.6;
-}
+{% block content %}
+<h2>Contact BEST-FIX</h2>
 
-/* Top strip */
-.top-strip {
-    background: #143247;
-    color: #fff;
-    font-size: 13px;
-}
+<p>
+    For questions, service updates, or general information, contact BEST-FIX.
+</p>
 
-.top-strip-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
+<div class="contact-layout">
 
-.top-strip-inner a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
+    <div class="contact-info-box">
+        <p><strong>Phone/Text:</strong> +1 (463) 203-2330</p>
 
-.top-strip-inner a:hover {
-    text-decoration: underline;
-}
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:support@getbestfix.com">support@getbestfix.com</a>
+        </p>
 
-/* Main header */
-.main-header {
-    background: #17384d;
-    border-bottom: 1px solid #102838;
-}
+        <p>
+            <strong>Website:</strong>
+            <a href="https://www.getbestfix.com/" target="_blank">www.getbestfix.com</a>
+        </p>
 
-.main-header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 18px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        <h3>Need service?</h3>
+        <p>
+            If you need help with computer repair, phone help, Wi-Fi, printers,
+            website services, or small business IT support, please use the Book Service page.
+        </p>
 
-.site-logo {
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
+        <p>
+            <a class="page-link" href="{% url 'book_service' %}">Book a Service Request</a>
+        </p>
+    </div>
 
-.site-logo .best {
-    color: #ffffff;
-}
+    <div class="contact-image-box">
+        <img src="{% static 'images/bestfix.png' %}" alt="BEST-FIX tech support">
+    </div>
 
-.site-logo .tech {
-    color: #f26b21;
-    margin-left: 4px;
-}
-
-.main-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 28px;
-    font-size: 15px;
-}
-
-.main-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Page wrapper */
-.page-wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: transparent;
-}
-
-/* Section banner */
-.section-banner {
-    background: #0d2a3e;
-    color: #fff;
-    padding: 26px 40px;
-}
-
-.section-banner h1 {
-    font-size: 22px;
-    font-weight: normal;
-}
-
-/* Two-column content */
-.content-layout {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    background: #ffffff;
-    min-height: 700px;
-}
-
-/* Sidebar */
-.sidebar {
-    background: #f2f2f2;
-    padding: 30px 24px;
-    border-right: 1px solid #ddd;
-}
-
-.sidebar h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #222;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #444;
-    font-size: 15px;
-}
-
-.sidebar ul li a:hover {
-    color: #0d2a3e;
-    text-decoration: underline;
-}
-
-/* Main content */
-.main-content {
-    padding: 35px 45px;
-}
-
-.main-content section {
-    margin-bottom: 35px;
-}
-
-.main-content h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px;
-    font-weight: normal;
-    color: #333;
-    margin-bottom: 18px;
-}
-
-.main-content p {
-    margin-bottom: 14px;
-    font-size: 16px;
-    color: #444;
-}
-
-/* Lists */
-.bullet-list {
-    margin: 15px 0 20px 25px;
-}
-
-.bullet-list li {
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-
-/* Table */
-.pricing-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.pricing-table th,
-.pricing-table td {
-    border: 1px solid #d8d8d8;
-    padding: 12px 14px;
-    text-align: left;
-}
-
-.pricing-table th {
-    background: #17384d;
-    color: #fff;
-}
-
-.pricing-table tr:nth-child(even) {
-    background: #f8f8f8;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .main-header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .main-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .main-nav a {
-        margin-left: 0;
-        margin-right: 16px;
-    }
-
-    .content-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .main-content {
-        padding: 25px 20px;
-    }
-
-    .section-banner {
-        padding: 20px;
-    }
-}
-.request-form {
-    max-width: 650px;
-    margin-top: 20px;
-}
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: #333;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 11px 12px;
-    border: 1px solid #cfcfcf;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #17384d;
-}
-
-.submit-btn {
-    background: #17384d;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.submit-btn:hover {
-    background: #0d2a3e;
-}
-
-.page-link {
-    color: #17384d;
-    font-weight: bold;
-}
-.image-banner {
-    background:
-        linear-gradient(rgba(13, 42, 62, 0.85), rgba(13, 42, 62, 0.85)),
-        url("../images/tech-banner.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-}
-
-.image-banner h1 {
-    font-size: 28px;
-    margin-bottom: 6px;
-}
-
-.image-banner p {
-    color: #dbeafe;
-    font-size: 15px;
-}
+</div>
+{% endblock %}
