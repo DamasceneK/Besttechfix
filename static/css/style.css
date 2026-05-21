@@ -468,3 +468,59 @@ body {
         grid-template-columns: 1fr;
     }
 }
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 25px;
+    align-items: start;
+    margin-top: 25px;
+}
+
+.contact-info-box {
+    background: #f8f8f8;
+    border-left: 4px solid #17384d;
+    padding: 22px;
+}
+
+.contact-image-box img {
+    width: 400px;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+/* Phone fix */
+@media (max-width: 700px) {
+    .contact-layout {
+        display: block;
+    }
+
+    .contact-info-box {
+        margin-bottom: 20px;
+        padding: 18px;
+    }
+
+    .contact-image-box img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        padding: 22px 16px;
+    }
+
+    .main-content h2 {
+        font-size: 26px;
+    }
+
+    .top-strip-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+    }
+}
