@@ -563,3 +563,40 @@ body {
         height: auto;
     }
 }
+/* FORCE CONTACT PAGE MOBILE FIX */
+.contact-layout {
+    display: block !important;
+    width: 100% !important;
+    max-width: 760px !important;
+}
+
+.contact-info-box {
+    width: 100% !important;
+    background: #f8f8f8 !important;
+    border-left: 4px solid #17384d !important;
+    padding: 22px !important;
+    margin-bottom: 25px !important;
+}
+
+.contact-image-box {
+    width: 100% !important;
+    max-width: 760px !important;
+}
+
+.contact-image-box img {
+    width: 100% !important;
+    max-width: 760px !important;
+    height: auto !important;
+    display: block !important;
+    border: 1px solid #ddd !important;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-layout,
+    .contact-info-box,
+    .contact-image-box,
+    .contact-image-box img {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
