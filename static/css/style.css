@@ -334,3 +334,137 @@ body {
         height: auto;
     }
 }
+/* Strong homepage */
+.home-hero {
+    background: linear-gradient(135deg, #f8f8f8, #eef5fb);
+    border-left: 5px solid #17384d;
+    padding: 35px;
+    margin-bottom: 30px;
+}
+
+.hero-label {
+    color: #f26b21;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.home-hero h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.primary-btn {
+    background: #17384d;
+    color: #ffffff;
+}
+
+.secondary-btn {
+    border: 1px solid #17384d;
+    color: #17384d;
+    background: #ffffff;
+}
+
+.quick-services,
+.why-section,
+.service-area {
+    margin-bottom: 35px;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.quick-grid div {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 18px;
+}
+
+.quick-grid h3 {
+    margin-top: 0;
+}
+
+/* Better phone layout */
+@media (max-width: 700px) {
+    .top-strip-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .site-logo {
+        font-size: 22px;
+    }
+
+    .page-wrapper {
+        margin: 0;
+        width: 100%;
+    }
+
+    .section-banner {
+        padding: 22px;
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 18px;
+    }
+
+    .sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 0;
+    }
+
+    .main-content {
+        padding: 24px 18px;
+    }
+
+    .home-hero {
+        padding: 24px 18px;
+    }
+
+    .home-hero h2 {
+        font-size: 27px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+    .quick-grid {
+        grid-template-columns: 1fr;
+    }
+}

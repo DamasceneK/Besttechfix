@@ -1,33 +1,71 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h2>Help Desk</h2>
 
-<p>
-    BEST FIX offers a local help desk for home users and small businesses
-    who need help with technology-related issues. If you have problems with your
-    computer, phone, printer, Wi-Fi, email, backup, or device setup, contact
-    BEST FIX for support.
-</p>
+<section class="home-hero">
+    <div>
+        <p class="hero-label">Local Tech Support & Website Services</p>
+        <h2>Reliable tech help for homes and small businesses.</h2>
+        <p>
+            BEST-FIX helps with computer repair, phone setup, Wi-Fi, printers,
+            website design, booking forms, and small business IT support.
+        </p>
 
-<p>Some common issues we help with include, but are not limited to:</p>
+        <div class="hero-buttons">
+            <a class="primary-btn" href="{% url 'book_service' %}">Book Service</a>
+            <a class="secondary-btn" href="{% url 'services' %}">View Services</a>
+        </div>
+    </div>
+</section>
 
-<ul class="bullet-list">
-    <li>Problems logging into computers or websites</li>
-    <li>Phone setup and backup</li>
-    <li>Wireless connectivity</li>
-    <li>Email and account setup</li>
-    <li>Slow computers</li>
-    <li>Computer failure troubleshooting</li>
-    <li>Printer setup and troubleshooting</li>
-    <li>Network connection issues</li>
-    <li>Software issues</li>
-    <li>Data transfer between devices</li>
-</ul>
+<section class="quick-services">
+    <h2>How BEST-FIX Can Help</h2>
 
-<p>
-    To resolve issues as quickly as possible, you may want to review the
-    Self-Help page before booking service. Many problems can be fixed quickly
-    with a few guided steps.
-</p>
+    <div class="quick-grid">
+        <div>
+            <h3>Computer Help</h3>
+            <p>Slow computer cleanup, updates, setup, and troubleshooting.</p>
+        </div>
+
+        <div>
+            <h3>Phone Help</h3>
+            <p>Phone setup, backup, storage cleanup, and transfer help.</p>
+        </div>
+
+        <div>
+            <h3>Wi-Fi & Printers</h3>
+            <p>Wireless printer setup, router help, and connection issues.</p>
+        </div>
+
+        <div>
+            <h3>Website Services</h3>
+            <p>Simple websites, contact forms, booking forms, and domain setup.</p>
+        </div>
+    </div>
+</section>
+
+<section class="why-section">
+    <h2>Why Choose BEST-FIX?</h2>
+
+    <ul class="bullet-list">
+        <li>Local and friendly support</li>
+        <li>Help for computers, phones, printers, Wi-Fi, and websites</li>
+        <li>Clear pricing before work starts</li>
+        <li>After-work and weekend appointments available</li>
+        <li>Support for homes and small businesses</li>
+    </ul>
+</section>
+
+<section class="service-area">
+    <h2>Service Area</h2>
+    <p>
+        Serving Indianapolis, Plainfield, Camby, Avon, Greenwood, and nearby areas.
+    </p>
+
+    <p>
+        <a class="page-link" href="{% url 'book_service' %}">Request a Service Appointment</a>
+    </p>
+</section>
+
 {% endblock %}
