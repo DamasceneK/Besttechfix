@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* Top strip */
 .top-strip {
     background: #143247;
     color: #fff;
@@ -32,6 +33,11 @@ body {
     font-weight: bold;
 }
 
+.top-strip-inner a:hover {
+    text-decoration: underline;
+}
+
+/* Main header */
 .main-header {
     background: #17384d;
     border-bottom: 1px solid #102838;
@@ -72,12 +78,18 @@ body {
     font-size: 15px;
 }
 
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Page wrapper */
 .page-wrapper {
     max-width: 1200px;
     margin: 40px auto;
     background: transparent;
 }
 
+/* Banner */
 .section-banner {
     background: #0d2a3e;
     color: #fff;
@@ -105,6 +117,7 @@ body {
     font-size: 15px;
 }
 
+/* Layout */
 .content-layout {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -112,6 +125,7 @@ body {
     min-height: 700px;
 }
 
+/* Sidebar */
 .sidebar {
     background: #f2f2f2;
     padding: 30px 24px;
@@ -138,12 +152,12 @@ body {
     font-size: 15px;
 }
 
-.sidebar ul li a:hover,
-.main-nav a:hover,
-.top-strip-inner a:hover {
+.sidebar ul li a:hover {
+    color: #0d2a3e;
     text-decoration: underline;
 }
 
+/* Main content */
 .main-content {
     padding: 35px 45px;
 }
@@ -168,6 +182,7 @@ body {
     color: #444;
 }
 
+/* Lists */
 .bullet-list {
     margin: 15px 0 20px 25px;
 }
@@ -177,6 +192,7 @@ body {
     font-size: 16px;
 }
 
+/* Pricing table */
 .pricing-table {
     width: 100%;
     border-collapse: collapse;
@@ -199,6 +215,7 @@ body {
     background: #f8f8f8;
 }
 
+/* Form */
 .request-form {
     max-width: 650px;
     margin-top: 20px;
@@ -225,6 +242,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #17384d;
+}
+
 .submit-btn {
     background: #17384d;
     color: white;
@@ -235,11 +259,16 @@ body {
     cursor: pointer;
 }
 
+.submit-btn:hover {
+    background: #0d2a3e;
+}
+
 .page-link {
     color: #17384d;
     font-weight: bold;
 }
 
+/* Services image cards */
 .service-image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -268,73 +297,7 @@ body {
     padding: 0 15px 18px;
 }
 
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 25px;
-    align-items: start;
-    margin-top: 25px;
-}
-
-.contact-info-box {
-    background: #f8f8f8;
-    border-left: 4px solid #17384d;
-    padding: 22px;
-}
-
-.contact-image-box img {
-    width: 400px;
-    height: 210px;
-    object-fit: cover;
-    display: block;
-    border: 1px solid #ddd;
-}
-
-@media (max-width: 900px) {
-    .main-header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .main-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .main-nav a {
-        margin-left: 0;
-        margin-right: 16px;
-    }
-
-    .content-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .main-content {
-        padding: 25px 20px;
-    }
-
-    .service-image-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-image-box img {
-        width: 100%;
-        height: auto;
-    }
-}
-/* Strong homepage */
+/* Homepage upgrade */
 .home-hero {
     background: linear-gradient(135deg, #f8f8f8, #eef5fb);
     border-left: 5px solid #17384d;
@@ -404,8 +367,92 @@ body {
     margin-top: 0;
 }
 
-/* Better phone layout */
-@media (max-width: 700px) {
+/* Contact page */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 25px;
+    align-items: start;
+    margin-top: 25px;
+}
+
+.contact-info-box {
+    background: #f8f8f8;
+    border-left: 4px solid #17384d;
+    padding: 22px;
+}
+
+.contact-image-box {
+    width: 100%;
+}
+
+.contact-image-box img {
+    width: 400px;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+    .main-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .main-nav a {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .contact-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    .contact-info-box {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        padding: 18px !important;
+    }
+
+    .contact-image-box {
+        width: 100% !important;
+    }
+
+    .contact-image-box img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+}
+
+/* Phone */
+@media screen and (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .top-strip-inner {
         justify-content: center;
         flex-wrap: wrap;
@@ -425,8 +472,8 @@ body {
         padding: 22px;
     }
 
-    .content-layout {
-        grid-template-columns: 1fr;
+    .section-banner h1 {
+        font-size: 24px;
     }
 
     .sidebar {
@@ -444,7 +491,15 @@ body {
     }
 
     .main-content {
-        padding: 24px 18px;
+        padding: 22px 16px;
+    }
+
+    .main-content h2 {
+        font-size: 26px;
+    }
+
+    .main-content p {
+        font-size: 16px;
     }
 
     .home-hero {
@@ -464,63 +519,8 @@ body {
         text-align: center;
     }
 
-    .quick-grid {
+    .quick-grid,
+    .service-image-grid {
         grid-template-columns: 1fr;
-    }
-}
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 25px;
-    align-items: start;
-    margin-top: 25px;
-}
-
-.contact-info-box {
-    background: #f8f8f8;
-    border-left: 4px solid #17384d;
-    padding: 22px;
-}
-
-.contact-image-box img {
-    width: 400px;
-    height: 210px;
-    object-fit: cover;
-    display: block;
-    border: 1px solid #ddd;
-}
-
-/* Phone fix */
-@media (max-width: 700px) {
-    .contact-layout {
-        display: block;
-    }
-
-    .contact-info-box {
-        margin-bottom: 20px;
-        padding: 18px;
-    }
-
-    .contact-image-box img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .main-content {
-        padding: 22px 16px;
-    }
-
-    .main-content h2 {
-        font-size: 26px;
-    }
-
-    .top-strip-inner {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .main-nav {
-        flex-wrap: wrap;
     }
 }
