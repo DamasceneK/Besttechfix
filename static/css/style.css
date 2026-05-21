@@ -524,3 +524,106 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* FINAL PHONE FIX - force true mobile layout */
+@media screen and (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .main-header-inner,
+    .top-strip-inner {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .main-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .main-nav a {
+        margin-left: 0;
+        font-size: 15px;
+    }
+
+    .content-layout {
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 24px 18px;
+    }
+
+    .main-content h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .section-banner {
+        width: 100%;
+        padding: 24px 20px;
+    }
+
+    .section-banner h1 {
+        font-size: 26px;
+    }
+
+    .contact-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    .contact-info-box {
+        width: 100% !important;
+        padding: 20px !important;
+        margin: 0 !important;
+    }
+
+    .contact-info-box p,
+    .contact-info-box a {
+        font-size: 16px;
+        word-break: break-word;
+    }
+
+    .contact-image-box {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .contact-image-box img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        object-fit: cover !important;
+    }
+}
